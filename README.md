@@ -1,30 +1,39 @@
 # algo-rhythms
-Tickling the plastics for music to my brain
+Tickling the plastics for music to my brain.
 
-A practical breadth of algorithms and data structures
+Learning test-driven development, functional programming via Clojurescript, and 
+a practical breadth of computer science through algorithms and data structures.
 
-## Merge Sort
+## Sorting
 
-## Quick Sort
+### Merge Sort
 
-## Binary Search
+### Quick Sort
 
-## Hashing
+
+## Search
+
+### Binary Search
+
+### Hashing
 - Unordered iteration
 - File systems
 - Cryptography
 - Search
 
-## Left-learning Red-Black Trees
+
+## Trees, Tries, and Graphs
+
+### Left-leaning Red-Black Trees
 - Ordered iteration
 - System symbol tables
 
-## B-Trees
+### B-Trees
 - File systems and databases
 
-## Ternary Search Tries
+### Ternary Search Tries
 
-## Graphs
+### Graphs
 - Pathing
 - Internet
 - Programs
