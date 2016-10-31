@@ -4,6 +4,9 @@ Tickling the plastics for music to my brain.
 Learning test-driven development, functional programming via Clojurescript, and 
 a practical breadth of computer science through algorithms and data structures.
 
+References:
+http://www.cs.princeton.edu/courses/archive/fall16/cos226/lectures.html
+
 ## Sorting
 
 ### Merge Sort
