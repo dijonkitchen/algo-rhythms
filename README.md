@@ -13,8 +13,11 @@ http://www3.cs.stonybrook.edu/~algorith/video-lectures/
 
 ### Merge Sort
 
-### Quick Sort
+### Intro Sort
 
+#### Heap Sort
+
+#### Quick Sort
 
 ## Search
 
