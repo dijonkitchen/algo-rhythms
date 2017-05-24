@@ -12,11 +12,11 @@ def merge(sorted_array1, sorted_array2)
   new_array = []
 
   while !sorted_array1.empty? && !sorted_array2.empty?
-    if sorted_array1.first < sorted_array2.first
-      new_array << sorted_array1.shift
-    else
-      new_array << sorted_array2.shift
-    end
+    new_array << if sorted_array1.first < sorted_array2.first
+                      sorted_array1.shift
+                    else
+                      sorted_array2.shift
+                    end
   end
 
   new_array + sorted_array1 + sorted_array2
