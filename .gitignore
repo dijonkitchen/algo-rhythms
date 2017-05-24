@@ -1,2 +1,5 @@
 # Ignore RSpec examples
 spec/examples.txt
+
+# Ignore simplecov coverage report files
+coverage
