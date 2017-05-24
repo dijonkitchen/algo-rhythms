@@ -8,16 +8,16 @@ def merge_sort(array)
   merge(left, right)
 end
 
-def merge(sorted_array_1, sorted_array_2)
+def merge(sorted_array1, sorted_array2)
   new_array = []
 
-  while !sorted_array_1.empty? && !sorted_array_2.empty?
-    if sorted_array_1.first < sorted_array_2.first
-      new_array << sorted_array_1.shift
+  while !sorted_array1.empty? && !sorted_array2.empty?
+    if sorted_array1.first < sorted_array2.first
+      new_array << sorted_array1.shift
     else
-      new_array << sorted_array_2.shift
+      new_array << sorted_array2.shift
     end
   end
 
-  new_array + sorted_array_1 + sorted_array_2
+  new_array + sorted_array1 + sorted_array2
 end
