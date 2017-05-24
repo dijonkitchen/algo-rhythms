@@ -22,7 +22,7 @@ http://www3.cs.stonybrook.edu/~algorith/video-lectures/
 
 #### Quick Sort
 
-## Search
+## Searching
 
 ### Binary Search
 
