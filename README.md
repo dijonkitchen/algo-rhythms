@@ -11,6 +11,9 @@ http://www3.cs.stonybrook.edu/~algorith/video-lectures/
 
 ## Sorting
 
+### Insertion Sort
+- Sorting lists slightly misplaced relative to list size
+
 ### Merge Sort
 
 ### Intro Sort
