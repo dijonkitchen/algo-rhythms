@@ -1,3 +1,10 @@
+# Intuition:
+# Divide and conquer a list continually into halves
+# until they're only one element
+# Merge these new lists by comparing their elements in order
+# Create a new slightly larger list that's sort
+# Continue recursively until the full list is done
+
 def merge_sort(array)
   return array if array.length <= 1
 
