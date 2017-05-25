@@ -1,4 +1,4 @@
-require_relative '../merge_sort'
+require_relative '../sorts/merge_sort'
 
 RSpec.describe 'Merge Sort' do
   it 'Sorts arrays' do
