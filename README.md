@@ -21,6 +21,8 @@ References:
 
 #### Quick Sort
 
+#### Counting Sort
+
 ## Searching
 
 ### Binary Search
