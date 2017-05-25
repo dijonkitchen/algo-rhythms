@@ -1,4 +1,4 @@
-require_relative '../insertion_sort'
+require_relative '../sorts/insertion_sort'
 
 RSpec.describe 'Insertion Sort' do
   it 'Sorts arrays' do
