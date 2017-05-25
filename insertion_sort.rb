@@ -5,8 +5,9 @@
 # Then you go back one card at a time until it's in the right spot
 # Continue until the end
 
-# Good for lists that are almost sorted and
-# off by only a little relative to the size of the list
+# Good for:
+# Streaming input to an already sorted list
+# Nearly sorted lists and off by a little relative to the size of the list
 # Time complexity would be O(n*k),
 # where k is the margin of error of an element to it's proper position
 
