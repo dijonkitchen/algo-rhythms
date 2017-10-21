@@ -13,7 +13,7 @@
 
 def insertion_sort(arr)
   arr.each_with_index do |num, index|
-    prev_index = index - 1
+    prev_index = index - 1 # Check index -1 edge case
     while prev_index >= 0 && arr[prev_index] > num
       arr[prev_index + 1] = arr[prev_index]
       prev_index -= 1
