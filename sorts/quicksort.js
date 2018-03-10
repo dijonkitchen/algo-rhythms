@@ -25,6 +25,40 @@
             // Decrease right index
     // Return left index
 
-const quicksort = (array) => {
+const quicksort = (array, leftIndex = 0, rightIndex = array.length - 1) => {
+    if (leftIndex >= rightIndex) {
+        return
+    }
+    const pivotIndex = Math.floor(leftIndex + (rightIndex - 1- leftIndex) / 2)
 
+    const newLeftIndex = partition(array, leftIndex, rightIndex, pivotIndex)
+    quicksort(array, leftIndex, newLeftIndex - 1)
+    quicksort(array, newLeftIndex, rightIndex)
 }
+
+const partition = (array, leftIndex, rightIndex, pivotIndex) => {
+    while (leftIndex <= rightIndex) {
+        while(array[leftIndex] < array[pivotIndex]) {
+            leftIndex++
+        }
+        while(array[rightIndex] > array[pivotIndex]) {
+            rightIndex--
+        }
+        if (leftIndex <= rightIndex) {
+            swap(array, leftIndex, rightIndex)
+            leftIndex++
+            rightIndex--
+        }
+    }
+    return leftIndex
+}
+
+const swap = (array, leftIndex, rightIndex) => {
+    const temp = array[leftIndex]
+    array[leftIndex] = array[rightIndex]
+    array[rightIndex] = temp
+}
+
+const array = [3,21,3,12,3,12,31,23,1]
+quicksort(array)
+console.log(array)
