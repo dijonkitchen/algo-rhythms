@@ -29,7 +29,9 @@ const quicksort = (array, leftIndex = 0, rightIndex = array.length - 1) => {
     if (leftIndex >= rightIndex) {
         return
     }
-    const pivotIndex = Math.floor(leftIndex + (rightIndex - 1- leftIndex) / 2)
+    const midIndex = Math.floor(leftIndex + (rightIndex - 1- leftIndex) / 2)
+    const firstMidLast = [array[leftIndex], array[midIndex], array[rightIndex]].sort()
+    const pivotIndex = array.indexOf(firstMidLast[1])
 
     const newLeftIndex = partition(array, leftIndex, rightIndex, pivotIndex)
     quicksort(array, leftIndex, newLeftIndex - 1)
