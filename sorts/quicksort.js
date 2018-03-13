@@ -64,3 +64,10 @@ const swap = (array, leftIndex, rightIndex) => {
 const array = [3,21,3,12,3,12,31,23,1]
 quicksort(array)
 console.log(array)
+
+// Complexity
+// Time:
+// O(n log n) on average
+// O(n^2) if reverse-sorted since it'll need to swap every element
+// Space:
+// O(log n) for recursive call stack
