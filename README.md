@@ -36,6 +36,8 @@ References:
 
 ## Trees, Tries, and Graphs
 
+### Hash Array Mapped Tries
+
 ### Left-leaning Red-Black Trees
 -   Ordered iteration
 -   System symbol tables
