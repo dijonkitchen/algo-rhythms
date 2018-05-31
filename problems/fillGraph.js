@@ -13,24 +13,30 @@
     // Check for left and right of that area for other, smaller fillings
     // Return total filled for all three ranges
 
+const maxIndices = (array, topCount) => {
+    const copy = array.slice()
+    const top = []
+
+    for (let i = 0; i < topCount; i++) {
+        const max = Math.max(...copy)
+        const maxIndex = copy.findIndex(point => point === max)
+
+        top.push(maxIndex)
+        copy[maxIndex] = -1
+    }
+
+    return top
+}
+
 const fillGraph = graph => {
     if (graph.length <= 2) {
         return 0
     }
 
-    const copy = graph.slice()
-    const topIndices = []
-    const topCount = 2
-
-    for (let i = 0; i < topCount; i++) {
-        const max = Math.max(...copy)
-        const maxIndex = copy.findIndex(point => point === max)
-        topIndices.push(maxIndex)
-        copy[maxIndex] = -1
-    }
-
+    const topIndices = maxIndices(graph, 2)
     const start = Math.min(topIndices[0], topIndices[1])
     const end = Math.max(topIndices[0], topIndices[1])
+
     const leftRange = graph.slice(0, start + 1)
     const topRange = graph.slice(start + 1, end)
     const rightRange = graph.slice(end)
