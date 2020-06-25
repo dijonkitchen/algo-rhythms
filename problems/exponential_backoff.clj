@@ -11,11 +11,11 @@
       (operation)
       (println "Success!")
       (catch Exception e
+        (println "Exponential backoff duration of" duration-ms)
+        (Thread/sleep duration-ms)
         (let [backoff (-> duration-ms
                           (* 2)
                           (+ (rand jitter)))]
-          (println "Exponential backoff duration of" duration-ms)
-          (Thread/sleep backoff)
           (exponential-backoff operation
                                backoff
                                (dec max-retries)
