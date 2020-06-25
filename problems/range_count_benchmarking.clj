@@ -117,12 +117,22 @@
   (occurrences-linear [1, 1, 2, 4, 5, 5, 7, 9] 5)
   (occurrences-binary [1, 1, 2, 4, 5, 5, 7, 9] -90)
 
+
+  (max-location [1, 1, 2, 2, 3] 2 0 4 nil false)
+  (min-location [1, 1, 2, 2, 3] 2 0 4 nil false)
+  ;; incorrect
+  (occurrences-binary [1, 1, 2, 2, 3] 2)
+
+  (get (frequencies [1 2 3 4 3 3 1 1]) 1)
+
   (doseq [size (map #(Math/pow 10 %) (range 1 8))]
     (let [rand-sorted-collection (vec (sort (gen/sample (s/gen pos-int?) size)))]
       (println "occurences-linear with " size " size")
       (time (occurrences-linear rand-sorted-collection (rand-int size)))
       (println "occurences-binary with " size " size")
       (time (occurrences-binary rand-sorted-collection (rand-int size)))
+      ;; (println "frequencies with " size " size")
+      ;; (time (get (frequencies rand-sorted-collection) (rand-int size)))
       (println)))
 
   ;; occurences-linear with  10.0  size
